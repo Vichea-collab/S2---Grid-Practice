@@ -1,0 +1,195 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f5f7fa;
+}
+
+.dashboard {
+  display: grid;
+  grid-template-columns: 200px 1fr 250px;
+  gap: 20px;
+  width: 90%;
+  max-width: 1200px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar {
+  background: #f0f4f8;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.sidebar h2 {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.sidebar nav ul {
+  list-style: none;
+}
+
+.sidebar nav ul li {
+  margin-bottom: 15px;
+  font-size: 16px;
+  color: #333;
+}
+
+.upgrade-btn {
+  margin-top: 20px;
+  background-color: #4a90e2;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.header h1 {
+  font-size: 24px;
+  color: #333;
+}
+
+.header p {
+  color: #777;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.stat-card {
+  background-color: #eef3f9;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.stat-card h4 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.stat-card p {
+  font-size: 16px;
+  color: #555;
+}
+
+.courses {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.course-card {
+  flex: 1;
+  background-color: #eef3f9;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  max-width: 350px;
+}
+
+.course-card h4 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.course-card p {
+  font-size: 16px;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.course-progress {
+  background-color: #f0f4f8;
+  height: 10px;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+.progress-bar {
+  background-color: #4e73df;
+  height: 100%;
+  border-radius: 5px;
+}
+
+.course-graph svg {
+  width: 100%;
+  height: 100px;
+}
+
+.profile {
+  background: #f0f4f8;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.profile .user-info {
+  text-align: center;
+}
+
+.profile .user-info img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+
+.profile h3 {
+  margin-top: 10px;
+  color: #333;
+}
+
+.reminders p {
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.reminders ul {
+  list-style: none;
+  margin-top: 10px;
+}
+
+.reminders ul li {
+  color: #555;
+  margin-bottom: 5px;
+}
+
+@media (max-width: 768px) {
+  .dashboard {
+      grid-template-columns: 1fr; /* Stack layout vertically */
+      padding: 15px;
+  }
+
+  .courses {
+      flex-direction: column;
+  }
+
+  .course-card {
+      max-width: 100%;
+  }
+
+  .stats {
+      grid-template-columns: 1fr;
+  }
+}
